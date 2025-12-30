@@ -76,7 +76,7 @@ const handleSubmit = async () => {
   }
 }
 
-const githubIssueUrl = 'https://github.com/your-username/ableton-copilot/issues/new'
+const githubIssueUrl = 'https://github.com/MatthisBD/ableton_copilot/issues/new'
 
 const openGithubIssue = (type: 'bug' | 'feature') => {
   const templates = {
@@ -130,7 +130,8 @@ const openGithubIssue = (type: 'bug' | 'feature') => {
                     />
                   </svg>
                   <p class="text-emerald-200">
-                    Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
+                    Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus
+                    brefs délais.
                   </p>
                 </div>
               </div>
