@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: rgb(249 115 22);
+  --color-primary-foreground: rgb(255 255 255);
+  --color-accent: rgb(249 115 22);
+  --color-accent-foreground: rgb(255 255 255);
+  --color-background: rgb(24 24 27);
+  --color-foreground: rgb(244 244 245);
+  --color-muted: rgb(39 39 42);
+  --color-muted-foreground: rgb(161 161 170);
+  --color-card: rgb(39 39 42);
+  --color-card-foreground: rgb(244 244 245);
+  --color-border: rgb(63 63 70);
+  --color-input: rgb(63 63 70);
+  --color-ring: rgb(249 115 22);
+  --color-destructive: rgb(239 68 68);
+  --color-destructive-foreground: rgb(255 255 255);
+  --color-secondary: rgb(63 63 70);
+  --color-secondary-foreground: rgb(244 244 245);
+  --radius: 0.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+::selection {
+  @apply bg-primary/30 text-foreground;
+}
+
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-zinc-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-zinc-600;
+}

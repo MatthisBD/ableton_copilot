@@ -1,0 +1,275 @@
+<script setup lang="ts">
+import { Button, Card } from '@/components/ui'
+
+const features = [
+  {
+    icon: 'chat',
+    title: 'Chat IA Intelligent',
+    description:
+      'Discutez naturellement avec une IA qui comprend la production musicale. Claude, GPT, Gemini ou votre propre LLM local (LM Studio, encore en phase de test).',
+  },
+  {
+    icon: 'midi',
+    title: 'Génération MIDI',
+    description:
+      'Générez des mélodies, accords, basslines et patterns de drums en quelques secondes. Respecte la théorie musicale.',
+  },
+  {
+    icon: 'ableton',
+    title: 'Contrôle Ableton Live',
+    description:
+      'Créez des pistes, clips et notes MIDI directement dans votre session. Pas de copier-coller, tout est automatique.',
+  },
+  {
+    icon: 'audio',
+    title: 'Génération Audio',
+    description:
+      "Intégration Suno AI et Mureka AI pour générer des chansons complètes avec vocals directement depuis l'application.",
+  },
+  {
+    icon: 'samples',
+    title: 'Gestion de Samples',
+    description:
+      'Parcourez vos samples locaux et Freesound. Détection automatique du BPM et de la tonalité.',
+  },
+  {
+    icon: 'library',
+    title: 'Bibliothèque de Sons',
+    description:
+      'Presets de genres, patterns de drums et profils de style. Partagez avec la communauté.',
+  },
+]
+
+const stats = [
+  { value: '5', label: 'Modèles IA' },
+  { value: '1000+', label: 'Patterns MIDI' },
+  { value: '21', label: 'Genres musicaux' },
+  { value: '24/7', label: 'Disponibilité' },
+]
+</script>
+
+<template>
+  <div>
+    <section class="relative overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-red-500/10 via-transparent to-transparent pointer-events-none"
+      />
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-500/5 rounded-full blur-3xl pointer-events-none"
+      />
+
+      <div class="max-w-7xl mx-auto px-6 py-12 md:py-24 relative">
+        <div class="max-w-3xl mx-auto text-center">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-sm font-medium mb-8"
+          >
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+            Disponible maintenant en bêta
+          </div>
+
+          <h1 class="text-4xl md:text-6xl font-bold text-zinc-100 leading-tight mb-6">
+            L'assistant IA pour
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-pink-500">
+              Ableton Live</span
+            >
+          </h1>
+
+          <p class="text-xl text-zinc-400 mb-10 leading-relaxed">
+            Contrôlez Ableton par la conversation. Générez du MIDI, des samples et de la musique
+            avec l'intelligence artificielle. Le GitHub Copilot de la production musicale.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <router-link to="/download">
+              <Button size="lg">
+                Télécharger gratuitement
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                  />
+                </svg>
+              </Button>
+            </router-link>
+            <router-link to="/docs">
+              <Button variant="outline" size="lg">
+                Voir la documentation
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+              </Button>
+            </router-link>
+          </div>
+        </div>
+
+        <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div v-for="stat in stats" :key="stat.label" class="text-center">
+            <div
+              class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-pink-500"
+            >
+              {{ stat.value }}
+            </div>
+            <div class="text-sm text-zinc-400 mt-1">{{ stat.label }}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative bg-zinc-950/50">
+      <div class="max-w-7xl mx-auto px-6 py-24">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-zinc-100 mb-4">
+            Tout ce dont vous avez besoin
+          </h2>
+          <p class="text-zinc-400 text-lg max-w-2xl mx-auto">
+            Un assistant complet pour accélérer votre workflow de production musicale
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Card
+            v-for="feature in features"
+            :key="feature.title"
+            class="p-6 hover:border-zinc-700 transition-colors group"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500/20 to-pink-500/20 flex items-center justify-center mb-4 group-hover:from-red-500/30 group-hover:to-pink-500/30 transition-colors"
+            >
+              <svg
+                v-if="feature.icon === 'chat'"
+                class="w-6 h-6 text-red-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                />
+              </svg>
+              <svg
+                v-else-if="feature.icon === 'midi'"
+                class="w-6 h-6 text-red-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+                />
+              </svg>
+              <svg
+                v-else-if="feature.icon === 'ableton'"
+                class="w-6 h-6 text-red-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
+                />
+              </svg>
+              <svg
+                v-else-if="feature.icon === 'audio'"
+                class="w-6 h-6 text-red-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+                />
+              </svg>
+              <svg
+                v-else-if="feature.icon === 'samples'"
+                class="w-6 h-6 text-red-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+                />
+              </svg>
+              <svg
+                v-else-if="feature.icon === 'library'"
+                class="w-6 h-6 text-red-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-zinc-100 mb-2">{{ feature.title }}</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed">{{ feature.description }}</p>
+          </Card>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative">
+      <div class="max-w-7xl mx-auto px-6 py-18">
+        <div
+          class="relative rounded-3xl bg-gradient-to-r from-red-500/10 to-pink-500/10 border border-red-500/20 p-12 md:p-16 text-center overflow-hidden"
+        >
+          <div
+            class="absolute top-0 right-0 w-64 h-64 bg-red-500/10 rounded-full blur-3xl pointer-events-none"
+          />
+          <div
+            class="absolute bottom-0 left-0 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl pointer-events-none"
+          />
+
+          <div class="relative">
+            <h2 class="text-3xl md:text-4xl font-bold text-zinc-100 mb-4">
+              Prêt à révolutionner votre workflow ?
+            </h2>
+            <p class="text-zinc-400 text-lg mb-8 max-w-xl mx-auto">
+              Rejoignez des centaines de producteurs qui utilisent déjà Ableton Copilot pour
+              accélérer leur créativité.
+            </p>
+            <router-link to="/download">
+              <Button size="lg">
+                Commencer maintenant
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
+                </svg>
+              </Button>
+            </router-link>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</template>
