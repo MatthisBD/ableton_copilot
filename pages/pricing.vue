@@ -1,5 +1,21 @@
 <script setup lang="ts">
-import { Button, Card } from '@/components/ui';
+useSeoMeta({
+  title: 'Tarifs - Ableton Copilot',
+  description:
+    'Decouvrez nos offres : plan gratuit avec 100 credits, abonnement BETA a 10€/mois, et packs de credits. Tarification simple et transparente.',
+  ogTitle: 'Tarifs - Ableton Copilot',
+  ogDescription:
+    'Commencez gratuitement avec 100 credits. Abonnements a partir de 10€/mois.',
+  ogImage: 'https://ableton-copilot.com/og-pricing.png',
+  twitterCard: 'summary_large_image',
+})
+
+useSchemaOrg([
+  defineWebPage({
+    name: 'Tarifs - Ableton Copilot',
+    description: 'Plans et tarifs pour Ableton Copilot.',
+  }),
+])
 
 const plans = [
   {
@@ -111,7 +127,7 @@ const creditCosts = [
     <section class="relative">
       <div class="max-w-7xl mx-auto px-6 py-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Card
+          <UiCard
             v-for="plan in plans"
             :key="plan.name"
             class="p-6 relative flex flex-col"
@@ -130,7 +146,7 @@ const creditCosts = [
             <div class="mb-6">
               <h3 class="text-lg font-bold text-zinc-100 mb-2">{{ plan.name }}</h3>
               <div class="flex items-baseline gap-1">
-                <span class="text-4xl font-bold text-zinc-100">{{ plan.price }}</span>
+                <span class="text-4xl font-bold text-zinc-100">{{ plan.price }}€</span>
                 <span class="text-zinc-500">{{ plan.period }}</span>
               </div>
               <p class="text-sm text-zinc-400 mt-2">{{ plan.description }}</p>
@@ -155,21 +171,21 @@ const creditCosts = [
               </li>
             </ul>
 
-            <Button
+            <UiButton
               :variant="plan.popular ? 'default' : 'outline'"
               class="w-full"
               :disabled="!plan.available"
             >
               {{ plan.cta }}
-            </Button>
-          </Card>
+            </UiButton>
+          </UiCard>
         </div>
       </div>
     </section>
 
     <section class="relative">
       <div class="max-w-7xl mx-auto px-6 py-16">
-        <Card class="p-6 bg-gradient-to-r from-purple-500/10 to-violet-500/10 border-purple-500/20">
+        <UiCard class="p-6 bg-gradient-to-r from-purple-500/10 to-violet-500/10 border-purple-500/20">
           <div class="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h3 class="text-xl font-bold text-zinc-100 mb-2">Mode BYOK</h3>
@@ -178,9 +194,9 @@ const creditCosts = [
                 Abonnement à 15€/mois pour 1500 crédits + accès aux fonctionnalités premium.
               </p>
             </div>
-            <Button variant="outline" class="shrink-0"> En savoir plus </Button>
+            <UiButton variant="outline" class="shrink-0"> En savoir plus </UiButton>
           </div>
-        </Card>
+        </UiCard>
       </div>
     </section>
 
@@ -192,7 +208,7 @@ const creditCosts = [
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
-          <Card
+          <UiCard
             v-for="pack in creditPacks"
             :key="pack.credits"
             class="p-6 text-center hover:border-zinc-700 transition-colors"
@@ -202,9 +218,9 @@ const creditCosts = [
             <div
               class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-pink-500"
             >
-              {{ pack.price }}
+              {{ pack.price }}€
             </div>
-          </Card>
+          </UiCard>
         </div>
       </div>
     </section>
@@ -216,7 +232,7 @@ const creditCosts = [
           <p class="text-zinc-400">Chaque action consomme un nombre de crédits différent</p>
         </div>
 
-        <Card class="max-w-2xl mx-auto overflow-hidden">
+        <UiCard class="max-w-2xl mx-auto overflow-hidden">
           <table class="w-full">
             <thead class="bg-zinc-800/50">
               <tr>
@@ -237,7 +253,7 @@ const creditCosts = [
               </tr>
             </tbody>
           </table>
-        </Card>
+        </UiCard>
       </div>
     </section>
 
@@ -248,15 +264,15 @@ const creditCosts = [
         </div>
 
         <div class="grid gap-4 max-w-3xl mx-auto">
-          <Card class="p-6">
+          <UiCard class="p-6">
             <h3 class="text-zinc-100 font-medium mb-2">Puis-je changer de plan à tout moment ?</h3>
             <p class="text-zinc-400 text-sm">
               Oui, vous pouvez passer à un plan supérieur ou inférieur à tout moment. Les crédits
               non utilisés sont reportés au mois suivant.
             </p>
-          </Card>
+          </UiCard>
 
-          <Card class="p-6">
+          <UiCard class="p-6">
             <h3 class="text-zinc-100 font-medium mb-2">
               Que se passe-t-il si j'épuise mes crédits ?
             </h3>
@@ -264,39 +280,39 @@ const creditCosts = [
               Vous pouvez acheter des packs de crédits supplémentaires ou attendre le renouvellement
               mensuel. Les fonctionnalités locales restent accessibles.
             </p>
-          </Card>
+          </UiCard>
 
-          <Card class="p-6">
+          <UiCard class="p-6">
             <h3 class="text-zinc-100 font-medium mb-2">Y a-t-il une période d'essai ?</h3>
             <p class="text-zinc-400 text-sm">
               Le plan FREE avec 100 crédits offerts fait office de période d'essai. Aucune carte
               bancaire n'est requise pour commencer.
             </p>
-          </Card>
+          </UiCard>
 
-          <Card class="p-6">
+          <UiCard class="p-6">
             <h3 class="text-zinc-100 font-medium mb-2">Comment fonctionne le mode BYOK ?</h3>
             <p class="text-zinc-400 text-sm">
               Le mode "Bring Your Own Keys" vous permet d'utiliser vos propres clés API pour les
               services IA. Vous payez directement aux fournisseurs (OpenAI, Anthropic, etc.) et
               bénéficiez d'appels illimités.
             </p>
-          </Card>
+          </UiCard>
         </div>
       </div>
     </section>
 
     <section class="relative">
       <div class="max-w-7xl mx-auto px-6 py-16">
-        <Card
+        <UiCard
           class="p-12 text-center bg-gradient-to-r from-red-500/10 to-pink-500/10 border-red-500/20"
         >
           <h2 class="text-3xl font-bold text-zinc-100 mb-4">Prêt à commencer ?</h2>
           <p class="text-zinc-400 text-lg mb-8 max-w-lg mx-auto">
             Téléchargez Ableton Copilot gratuitement et recevez 100 crédits offerts.
           </p>
-          <router-link to="/download">
-            <Button size="lg">
+          <NuxtLink to="/download">
+            <UiButton size="lg">
               Télécharger maintenant
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
@@ -306,9 +322,9 @@ const creditCosts = [
                   d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                 />
               </svg>
-            </Button>
-          </router-link>
-        </Card>
+            </UiButton>
+          </NuxtLink>
+        </UiCard>
       </div>
     </section>
   </div>

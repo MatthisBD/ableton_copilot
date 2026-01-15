@@ -1,6 +1,20 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
-import { Card } from '@/components/ui'
+useSeoMeta({
+  title: 'Documentation - Ableton Copilot',
+  description:
+    'Guide complet pour utiliser Ableton Copilot. Installation, configuration, chat IA, generation MIDI, generation audio et FAQ.',
+  ogTitle: 'Documentation - Ableton Copilot',
+  ogDescription: 'Apprenez a utiliser Ableton Copilot avec notre documentation complete.',
+  ogImage: 'https://ableton-copilot.com/og-docs.png',
+  twitterCard: 'summary_large_image',
+})
+
+useSchemaOrg([
+  defineWebPage({
+    name: 'Documentation - Ableton Copilot',
+    description: 'Guide complet pour utiliser Ableton Copilot.',
+  }),
+])
 
 const activeSection = ref('getting-started')
 
@@ -37,7 +51,7 @@ onMounted(() => {
     {
       rootMargin: '-20% 0px -70% 0px',
       threshold: 0,
-    }
+    },
   )
 
   sections.forEach((section) => {
@@ -88,7 +102,7 @@ onUnmounted(() => {
               utiliser l'assistant IA pour votre production musicale.
             </p>
 
-            <Card class="p-6 bg-gradient-to-r from-red-500/10 to-pink-500/10 border-red-500/20">
+            <UiCard class="p-6 bg-gradient-to-r from-red-500/10 to-pink-500/10 border-red-500/20">
               <div class="flex items-start gap-4">
                 <div
                   class="w-10 h-10 rounded-lg bg-red-500/20 flex items-center justify-center shrink-0"
@@ -116,7 +130,7 @@ onUnmounted(() => {
                   </ul>
                 </div>
               </div>
-            </Card>
+            </UiCard>
           </section>
 
           <section id="installation" class="mb-16">
@@ -129,8 +143,8 @@ onUnmounted(() => {
                 </h3>
                 <p class="text-zinc-400 mb-4">
                   Rendez-vous sur la
-                  <router-link to="/download" class="text-red-500 hover:underline"
-                    >page de téléchargement</router-link
+                  <NuxtLink to="/download" class="text-red-500 hover:underline"
+                    >page de téléchargement</NuxtLink
                   >
                   et téléchargez le fichier .exe correspondant à votre système.
                 </p>
@@ -152,7 +166,7 @@ onUnmounted(() => {
                   Pour que Copilot puisse contrôler Ableton Live, vous devez installer le script
                   AbletonJS :
                 </p>
-                <Card class="p-4 bg-zinc-800/50">
+                <UiCard class="p-4 bg-zinc-800/50">
                   <ol class="text-zinc-300 text-sm space-y-2">
                     <li>1. Ouvrez Ableton Copilot</li>
                     <li>2. Allez dans Dashboard &gt; Configuration AbletonJS</li>
@@ -163,7 +177,7 @@ onUnmounted(() => {
                     </li>
                     <li>5. Relancez Ableton Live</li>
                   </ol>
-                </Card>
+                </UiCard>
               </div>
             </div>
           </section>
@@ -185,12 +199,10 @@ onUnmounted(() => {
                 <p class="text-zinc-400 mb-4">
                   Chaque action IA consomme des crédits. Le plan gratuit inclut 100 crédits par
                   mois. Consultez la
-                  <router-link to="/pricing" class="text-red-500 hover:underline"
-                    >page tarifs</router-link
-                  >
+                  <NuxtLink to="/pricing" class="text-red-500 hover:underline">page tarifs</NuxtLink>
                   pour plus d'options.
                 </p>
-                <Card class="p-4 bg-zinc-800/50">
+                <UiCard class="p-4 bg-zinc-800/50">
                   <h4 class="text-zinc-100 font-medium mb-2">Coût des opérations</h4>
                   <ul class="text-zinc-400 text-sm space-y-1">
                     <li>GPT-4.1 Mini: 7 crédits/message</li>
@@ -200,7 +212,7 @@ onUnmounted(() => {
                     <li>Génération Suno: 55 crédits/chanson</li>
                     <li>Génération Mureka: 45 crédits/chanson</li>
                   </ul>
-                </Card>
+                </UiCard>
               </div>
 
               <div>
@@ -224,13 +236,11 @@ onUnmounted(() => {
             </p>
 
             <div class="space-y-4">
-              <Card class="p-4">
+              <UiCard class="p-4">
                 <h4 class="text-zinc-100 font-medium mb-2">Exemples de prompts</h4>
                 <ul class="text-zinc-400 text-sm space-y-2">
                   <li>
-                    <code class="bg-zinc-800 px-2 py-1 rounded"
-                      >"Crée moi une track Hardtechno"</code
-                    >
+                    <code class="bg-zinc-800 px-2 py-1 rounded">"Crée moi une track Hardtechno"</code>
                   </li>
                   <li>
                     <code class="bg-zinc-800 px-2 py-1 rounded"
@@ -253,9 +263,9 @@ onUnmounted(() => {
                     >
                   </li>
                 </ul>
-              </Card>
+              </UiCard>
 
-              <Card class="p-4">
+              <UiCard class="p-4">
                 <h4 class="text-zinc-100 font-medium mb-2">Modes disponibles</h4>
                 <ul class="text-zinc-400 text-sm space-y-2">
                   <li>
@@ -267,7 +277,7 @@ onUnmounted(() => {
                     timeline
                   </li>
                 </ul>
-              </Card>
+              </UiCard>
             </div>
           </section>
 
@@ -280,7 +290,7 @@ onUnmounted(() => {
             </p>
 
             <div class="grid gap-4 md:grid-cols-2">
-              <Card class="p-4">
+              <UiCard class="p-4">
                 <h4 class="text-zinc-100 font-medium mb-2">Mélodie</h4>
                 <ul class="text-zinc-400 text-sm space-y-1">
                   <li>Tonalité et gamme</li>
@@ -289,9 +299,9 @@ onUnmounted(() => {
                   <li>Contour mélodique</li>
                   <li>Style rythmique</li>
                 </ul>
-              </Card>
+              </UiCard>
 
-              <Card class="p-4">
+              <UiCard class="p-4">
                 <h4 class="text-zinc-100 font-medium mb-2">Accords</h4>
                 <ul class="text-zinc-400 text-sm space-y-1">
                   <li>Progression d'accords</li>
@@ -299,9 +309,9 @@ onUnmounted(() => {
                   <li>Style: block ou arpégé</li>
                   <li>Complexité harmonique</li>
                 </ul>
-              </Card>
+              </UiCard>
 
-              <Card class="p-4">
+              <UiCard class="p-4">
                 <h4 class="text-zinc-100 font-medium mb-2">Bassline</h4>
                 <ul class="text-zinc-400 text-sm space-y-1">
                   <li>Pattern de base</li>
@@ -309,9 +319,9 @@ onUnmounted(() => {
                   <li>Octave</li>
                   <li>Synchronisation avec accords</li>
                 </ul>
-              </Card>
+              </UiCard>
 
-              <Card class="p-4">
+              <UiCard class="p-4">
                 <h4 class="text-zinc-100 font-medium mb-2">Drums</h4>
                 <ul class="text-zinc-400 text-sm space-y-1">
                   <li>Mode multi-pistes</li>
@@ -319,7 +329,7 @@ onUnmounted(() => {
                   <li>Patterns par genre</li>
                   <li>Editeur de grille 16 steps</li>
                 </ul>
-              </Card>
+              </UiCard>
             </div>
           </section>
 
@@ -331,7 +341,7 @@ onUnmounted(() => {
             </p>
 
             <div class="space-y-4">
-              <Card class="p-4">
+              <UiCard class="p-4">
                 <h4 class="text-zinc-100 font-medium mb-2">Suno AI</h4>
                 <p class="text-zinc-400 text-sm mb-2">
                   Génération de musique complète avec lyrics. Idéal pour les démos et l'inspiration.
@@ -341,22 +351,22 @@ onUnmounted(() => {
                   <li>Lyrics personnalisés</li>
                   <li>Multiple styles disponibles</li>
                 </ul>
-              </Card>
+              </UiCard>
 
-              <Card class="p-4">
+              <UiCard class="p-4">
                 <h4 class="text-zinc-100 font-medium mb-2">Mureka AI</h4>
                 <p class="text-zinc-400 text-sm mb-2">
                   Génération musicale avancée avec support vocal.
                 </p>
-              </Card>
+              </UiCard>
 
-              <Card class="p-4">
+              <UiCard class="p-4">
                 <h4 class="text-zinc-100 font-medium mb-2">Séparation de Stems</h4>
                 <p class="text-zinc-400 text-sm">
                   Extrayez les éléments individuels (drums, bass, vocals, autres) de n'importe quel
                   fichier audio grâce à l'IA Demucs.
                 </p>
-              </Card>
+              </UiCard>
             </div>
           </section>
 
@@ -368,7 +378,7 @@ onUnmounted(() => {
               disponible prochainement.
             </p>
 
-            <Card class="p-4 bg-amber-500/10 border-amber-500/20">
+            <UiCard class="p-4 bg-amber-500/10 border-amber-500/20">
               <div class="flex items-center gap-3">
                 <svg
                   class="w-5 h-5 text-amber-500"
@@ -388,14 +398,14 @@ onUnmounted(() => {
                   anticipé.
                 </p>
               </div>
-            </Card>
+            </UiCard>
           </section>
 
           <section id="faq" class="mb-16">
             <h2 class="text-2xl font-bold text-zinc-100 mb-4">FAQ</h2>
 
             <div class="space-y-4">
-              <Card class="p-4">
+              <UiCard class="p-4">
                 <h4 class="text-zinc-100 font-medium mb-2">
                   Ableton Copilot fonctionne-t-il avec d'autres DAW ?
                 </h4>
@@ -403,9 +413,9 @@ onUnmounted(() => {
                   Non, actuellement Ableton Copilot est uniquement compatible avec Ableton Live 11+.
                   Le support d'autres DAW est envisagé pour le futur.
                 </p>
-              </Card>
+              </UiCard>
 
-              <Card class="p-4">
+              <UiCard class="p-4">
                 <h4 class="text-zinc-100 font-medium mb-2">
                   Puis-je utiliser l'application hors-ligne ?
                 </h4>
@@ -414,25 +424,25 @@ onUnmounted(() => {
                   sons fonctionnent hors-ligne. Les fonctionnalités IA cloud nécessitent une
                   connexion internet.
                 </p>
-              </Card>
+              </UiCard>
 
-              <Card class="p-4">
+              <UiCard class="p-4">
                 <h4 class="text-zinc-100 font-medium mb-2">Mes données sont-elles sécurisées ?</h4>
                 <p class="text-zinc-400 text-sm">
                   Oui. Vos projets Ableton ne sont jamais envoyés sur nos serveurs. Seuls les
                   messages du chat sont traités par les API IA. Vos clés API sont stockées
                   localement.
                 </p>
-              </Card>
+              </UiCard>
 
-              <Card class="p-4">
+              <UiCard class="p-4">
                 <h4 class="text-zinc-100 font-medium mb-2">Comment obtenir plus de crédits ?</h4>
                 <p class="text-zinc-400 text-sm">
                   Vous pouvez acheter des packs de crédits ponctuels ou souscrire à un abonnement
                   mensuel. Le mode BYOK permet d'utiliser vos propres clés API pour des crédits
                   illimités.
                 </p>
-              </Card>
+              </UiCard>
             </div>
           </section>
         </div>

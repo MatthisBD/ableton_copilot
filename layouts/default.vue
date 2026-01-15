@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import { TheNavbar, TheFooter } from '@/components/layout'
 </script>
 
 <template>
   <div class="min-h-screen flex flex-col">
-    <TheNavbar />
+    <LayoutTheNavbar />
     <main class="flex-1 pt-[73px]">
-      <RouterView />
+      <slot />
     </main>
-    <TheFooter />
+    <LayoutTheFooter />
   </div>
 </template>

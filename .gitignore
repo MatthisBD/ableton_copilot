@@ -1,3 +1,15 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+dist-ssr
+
+# Node dependencies
+node_modules
+
 # Logs
 logs
 *.log
@@ -7,25 +19,24 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-.DS_Store
-dist
-dist-ssr
-coverage
-*.local
-
-# Environment variables
+# Local env files
 .env
 .env.local
 .env.*.local
+*.local
 
 # Personal notes
 pour moi.txt
+
+# Misc
+.DS_Store
+coverage
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
+.fleet
 *.suo
 *.ntvs*
 *.njsproj
@@ -33,7 +44,6 @@ pour moi.txt
 *.sw?
 
 *.tsbuildinfo
-
 .eslintcache
 
 # Cypress
@@ -42,3 +52,6 @@ pour moi.txt
 
 # Vitest
 __screenshots__/
+
+# Vercel
+.vercel

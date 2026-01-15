@@ -1,13 +1,26 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
-import { Card } from '@/components/ui'
+useSeoMeta({
+  title: 'Mentions Légales - Ableton Copilot',
+  description:
+    'Mentions legales, politique de confidentialite, conditions d\'utilisation et politique de cookies d\'Ableton Copilot.',
+  ogTitle: 'Mentions Légales - Ableton Copilot',
+  ogDescription: 'Informations legales et politique de confidentialite.',
+  twitterCard: 'summary',
+})
+
+useSchemaOrg([
+  defineWebPage({
+    name: 'Mentions Légales - Ableton Copilot',
+    description: 'Informations legales d\'Ableton Copilot.',
+  }),
+])
 
 const activeSection = ref('mentions')
 
 const sections = [
   { id: 'mentions', label: 'Mentions légales' },
   { id: 'privacy', label: 'Politique de confidentialité' },
-  { id: 'terms', label: 'Conditions d\'utilisation' },
+  { id: 'terms', label: "Conditions d'utilisation" },
   { id: 'cookies', label: 'Politique de cookies' },
 ]
 
@@ -33,7 +46,7 @@ onMounted(() => {
     {
       rootMargin: '-20% 0px -70% 0px',
       threshold: 0,
-    }
+    },
   )
 
   sections.forEach((section) => {
@@ -61,9 +74,11 @@ onUnmounted(() => {
               :key="section.id"
               @click="scrollToSection(section.id)"
               class="block w-full text-left px-3 py-2 rounded-lg text-sm transition-colors"
-              :class="activeSection === section.id
-                ? 'bg-red-500/10 text-red-500 font-medium'
-                : 'text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800'"
+              :class="
+                activeSection === section.id
+                  ? 'bg-red-500/10 text-red-500 font-medium'
+                  : 'text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800'
+              "
             >
               {{ section.label }}
             </button>
@@ -75,51 +90,59 @@ onUnmounted(() => {
         <section id="mentions" class="mb-16">
           <h1 class="text-4xl font-bold text-zinc-100 mb-6">Mentions Légales</h1>
 
-          <Card class="p-6 bg-amber-500/10 border-amber-500/20 mb-8">
+          <UiCard class="p-6 bg-amber-500/10 border-amber-500/20 mb-8">
             <div class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-amber-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              <svg
+                class="w-5 h-5 text-amber-500 mt-0.5 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                />
               </svg>
               <div>
                 <h4 class="text-amber-200 font-medium mb-1">En cours de rédaction</h4>
                 <p class="text-amber-200/70 text-sm">
-                  Les mentions légales complètes seront publiées prochainement.
-                  Cette page sert de placeholder.
+                  Les mentions légales complètes seront publiées prochainement. Cette page sert de
+                  placeholder.
                 </p>
               </div>
             </div>
-          </Card>
+          </UiCard>
 
           <div class="prose prose-invert prose-zinc max-w-none">
             <h2 class="text-xl font-semibold text-zinc-100 mb-4">Éditeur du site</h2>
-            <Card class="p-4 mb-6">
+            <UiCard class="p-4 mb-6">
               <p class="text-zinc-400 text-sm">
                 [Nom de l'entreprise ou du développeur]<br />
                 [Adresse]<br />
                 [Email de contact]<br />
                 [Numéro SIRET si applicable]
               </p>
-            </Card>
+            </UiCard>
 
             <h2 class="text-xl font-semibold text-zinc-100 mb-4">Hébergement</h2>
-            <Card class="p-4 mb-6">
+            <UiCard class="p-4 mb-6">
               <p class="text-zinc-400 text-sm">
-                GitHub Pages<br />
-                GitHub, Inc.<br />
-                88 Colin P Kelly Jr St<br />
-                San Francisco, CA 94107, USA
+                Vercel Inc.<br />
+                340 S Lemon Ave #4133<br />
+                Walnut, CA 91789, USA
               </p>
-            </Card>
+            </UiCard>
 
             <h2 class="text-xl font-semibold text-zinc-100 mb-4">Propriété intellectuelle</h2>
             <p class="text-zinc-400 mb-4">
-              Ableton Copilot est une marque déposée. Le code source de l'application
-              est distribué sous licence MIT. Les logos et icônes sont protégés par
-              le droit d'auteur.
+              Ableton Copilot est une marque déposée. Le code source de l'application est distribué
+              sous licence MIT. Les logos et icônes sont protégés par le droit d'auteur.
             </p>
             <p class="text-zinc-400 mb-4">
-              "Ableton" et "Ableton Live" sont des marques déposées d'Ableton AG.
-              Ableton Copilot n'est pas affilié à Ableton AG.
+              "Ableton" et "Ableton Live" sont des marques déposées d'Ableton AG. Ableton Copilot
+              n'est pas affilié à Ableton AG.
             </p>
           </div>
         </section>
@@ -143,9 +166,7 @@ onUnmounted(() => {
 
             <div>
               <h3 class="text-lg font-semibold text-zinc-100 mb-3">Utilisation des données</h3>
-              <p class="text-zinc-400">
-                Vos données sont utilisées uniquement pour :
-              </p>
+              <p class="text-zinc-400">Vos données sont utilisées uniquement pour :</p>
               <ul class="text-zinc-400 mt-2 space-y-1">
                 <li>Fournir le service Ableton Copilot</li>
                 <li>Traiter vos paiements</li>
@@ -165,16 +186,17 @@ onUnmounted(() => {
             <div>
               <h3 class="text-lg font-semibold text-zinc-100 mb-3">Sécurité</h3>
               <p class="text-zinc-400">
-                Nous utilisons le chiffrement SSL/TLS pour toutes les communications.
-                Vos clés API personnelles sont stockées localement sur votre machine.
+                Nous utilisons le chiffrement SSL/TLS pour toutes les communications. Vos clés API
+                personnelles sont stockées localement sur votre machine.
               </p>
             </div>
 
             <div>
               <h3 class="text-lg font-semibold text-zinc-100 mb-3">Vos droits</h3>
               <p class="text-zinc-400">
-                Conformément au RGPD, vous disposez d'un droit d'accès, de rectification,
-                de suppression et de portabilité de vos données. Contactez-nous pour exercer ces droits.
+                Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, de
+                suppression et de portabilité de vos données. Contactez-nous pour exercer ces
+                droits.
               </p>
             </div>
           </div>
@@ -195,16 +217,16 @@ onUnmounted(() => {
             <div>
               <h3 class="text-lg font-semibold text-zinc-100 mb-3">Description du service</h3>
               <p class="text-zinc-400">
-                Ableton Copilot est un assistant IA pour la production musicale.
-                Le service est fourni "tel quel" sans garantie de disponibilité ou de résultats.
+                Ableton Copilot est un assistant IA pour la production musicale. Le service est
+                fourni "tel quel" sans garantie de disponibilité ou de résultats.
               </p>
             </div>
 
             <div>
               <h3 class="text-lg font-semibold text-zinc-100 mb-3">Utilisation acceptable</h3>
               <p class="text-zinc-400">
-                Vous vous engagez à utiliser le service de manière légale et éthique.
-                Il est interdit d'utiliser le service pour :
+                Vous vous engagez à utiliser le service de manière légale et éthique. Il est
+                interdit d'utiliser le service pour :
               </p>
               <ul class="text-zinc-400 mt-2 space-y-1">
                 <li>Générer du contenu illégal ou préjudiciable</li>
@@ -217,8 +239,9 @@ onUnmounted(() => {
             <div>
               <h3 class="text-lg font-semibold text-zinc-100 mb-3">Propriété du contenu</h3>
               <p class="text-zinc-400">
-                Vous conservez la propriété des œuvres musicales que vous créez avec Ableton Copilot.
-                Les générations IA sont soumises aux conditions des fournisseurs respectifs.
+                Vous conservez la propriété des œuvres musicales que vous créez avec Ableton
+                Copilot. Les générations IA sont soumises aux conditions des fournisseurs
+                respectifs.
               </p>
             </div>
 
@@ -239,13 +262,14 @@ onUnmounted(() => {
             <div>
               <h3 class="text-lg font-semibold text-zinc-100 mb-3">Qu'est-ce qu'un cookie ?</h3>
               <p class="text-zinc-400">
-                Un cookie est un petit fichier texte stocké sur votre appareil lors de la visite d'un site web.
+                Un cookie est un petit fichier texte stocké sur votre appareil lors de la visite
+                d'un site web.
               </p>
             </div>
 
             <div>
               <h3 class="text-lg font-semibold text-zinc-100 mb-3">Cookies utilisés</h3>
-              <Card class="p-4">
+              <UiCard class="p-4">
                 <ul class="text-zinc-400 text-sm space-y-2">
                   <li>
                     <strong class="text-zinc-100">Cookies essentiels:</strong>
@@ -256,28 +280,28 @@ onUnmounted(() => {
                     Pour comprendre l'utilisation du site (anonymisés)
                   </li>
                 </ul>
-              </Card>
+              </UiCard>
             </div>
 
             <div>
               <h3 class="text-lg font-semibold text-zinc-100 mb-3">Gestion des cookies</h3>
               <p class="text-zinc-400">
-                Vous pouvez configurer votre navigateur pour refuser les cookies.
-                Notez que cela peut affecter le fonctionnement de certaines fonctionnalités.
+                Vous pouvez configurer votre navigateur pour refuser les cookies. Notez que cela
+                peut affecter le fonctionnement de certaines fonctionnalités.
               </p>
             </div>
           </div>
         </section>
 
-        <Card class="p-6 bg-zinc-800/50">
-          <p class="text-zinc-400 text-sm">
-            Dernière mise à jour : 30 Décembre 2025
-          </p>
+        <UiCard class="p-6 bg-zinc-800/50">
+          <p class="text-zinc-400 text-sm">Dernière mise à jour : 30 Décembre 2025</p>
           <p class="text-zinc-500 text-sm mt-2">
             Pour toute question concernant ces documents, contactez-nous à
-            <a href="mailto:ableton.copilot@gmail.com" class="text-red-500 hover:underline">ableton.copilot@gmail.com</a>
+            <a href="mailto:ableton.copilot@gmail.com" class="text-red-500 hover:underline"
+              >ableton.copilot@gmail.com</a
+            >
           </p>
-        </Card>
+        </UiCard>
       </main>
     </div>
   </div>

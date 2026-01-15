@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useRoute } from 'vue-router'
-import { Button } from '@/components/ui'
-
 const route = useRoute()
 const isMenuOpen = ref(false)
 
@@ -23,7 +19,7 @@ const navLinks = [
   <header class="fixed top-0 left-0 right-0 z-50 bg-zinc-900/80 backdrop-blur-lg border-b border-zinc-800">
     <div class="max-w-7xl mx-auto px-6 py-4">
       <div class="flex items-center justify-between">
-        <router-link to="/" class="flex items-center gap-3 hover:opacity-80 transition group">
+        <NuxtLink to="/" class="flex items-center gap-3 hover:opacity-80 transition group">
           <div class="w-10 h-10 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg shadow-red-500/25 group-hover:shadow-red-500/40 transition-shadow">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
@@ -32,10 +28,10 @@ const navLinks = [
           <span class="text-xl font-bold text-zinc-100">
             Ableton <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-pink-500">Copilot</span>
           </span>
-        </router-link>
+        </NuxtLink>
 
         <nav class="hidden md:flex items-center gap-1">
-          <router-link
+          <NuxtLink
             v-for="link in navLinks"
             :key="link.path"
             :to="link.path"
@@ -45,18 +41,18 @@ const navLinks = [
               : 'text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800'"
           >
             {{ link.label }}
-          </router-link>
+          </NuxtLink>
         </nav>
 
         <div class="hidden md:flex items-center gap-3">
-          <router-link to="/download">
-            <Button>
+          <NuxtLink to="/download">
+            <UiButton>
               Télécharger
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
               </svg>
-            </Button>
-          </router-link>
+            </UiButton>
+          </NuxtLink>
         </div>
 
         <button
@@ -84,7 +80,7 @@ const navLinks = [
 
       <div v-if="isMenuOpen" class="md:hidden mt-4 pb-4 border-t border-zinc-800 pt-4">
         <nav class="flex flex-col gap-2">
-          <router-link
+          <NuxtLink
             v-for="link in navLinks"
             :key="link.path"
             :to="link.path"
@@ -95,15 +91,15 @@ const navLinks = [
             @click="toggleMenu"
           >
             {{ link.label }}
-          </router-link>
-          <router-link to="/download" @click="toggleMenu" class="mt-2">
-            <Button class="w-full">
+          </NuxtLink>
+          <NuxtLink to="/download" @click="toggleMenu" class="mt-2">
+            <UiButton class="w-full">
               Télécharger
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
               </svg>
-            </Button>
-          </router-link>
+            </UiButton>
+          </NuxtLink>
         </nav>
       </div>
     </div>

@@ -1,5 +1,35 @@
 <script setup lang="ts">
-import { Button, Card } from '@/components/ui'
+useSeoMeta({
+  title: 'Ableton Copilot - Assistant IA pour la Production Musicale',
+  description:
+    "Controlez Ableton Live par la conversation. Generez du MIDI, des samples et de la musique avec l'intelligence artificielle. Le GitHub Copilot de la production musicale.",
+  ogTitle: 'Ableton Copilot - Assistant IA pour Ableton Live',
+  ogDescription:
+    "L'assistant IA qui revolutionne la production musicale. Generez du MIDI, controlez Ableton, creez de la musique.",
+  ogImage: 'https://ableton-copilot.com/og-image.png',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Ableton Copilot - Assistant IA pour Ableton Live',
+  twitterDescription:
+    "L'assistant IA qui revolutionne la production musicale. Generez du MIDI, controlez Ableton.",
+})
+
+useSchemaOrg([
+  defineWebPage({
+    name: 'Ableton Copilot - Assistant IA pour la Production Musicale',
+    description:
+      "Controlez Ableton Live par la conversation. Generez du MIDI avec l'intelligence artificielle.",
+  }),
+  defineSoftwareApp({
+    name: 'Ableton Copilot',
+    operatingSystem: 'Windows',
+    applicationCategory: 'MultimediaApplication',
+    offers: {
+      price: '0',
+      priceCurrency: 'EUR',
+    },
+  }),
+])
 
 const features = [
   {
@@ -80,8 +110,8 @@ const stats = [
           </p>
 
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <router-link to="/download">
-              <Button size="lg">
+            <NuxtLink to="/download">
+              <UiButton size="lg">
                 Télécharger gratuitement
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
@@ -91,10 +121,10 @@ const stats = [
                     d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                   />
                 </svg>
-              </Button>
-            </router-link>
-            <router-link to="/docs">
-              <Button variant="outline" size="lg">
+              </UiButton>
+            </NuxtLink>
+            <NuxtLink to="/docs">
+              <UiButton variant="outline" size="lg">
                 Voir la documentation
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
@@ -104,8 +134,8 @@ const stats = [
                     d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                   />
                 </svg>
-              </Button>
-            </router-link>
+              </UiButton>
+            </NuxtLink>
           </div>
         </div>
 
@@ -134,7 +164,7 @@ const stats = [
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Card
+          <UiCard
             v-for="feature in features"
             :key="feature.title"
             class="p-6 hover:border-zinc-700 transition-colors group"
@@ -229,7 +259,7 @@ const stats = [
             </div>
             <h3 class="text-lg font-semibold text-zinc-100 mb-2">{{ feature.title }}</h3>
             <p class="text-zinc-400 text-sm leading-relaxed">{{ feature.description }}</p>
-          </Card>
+          </UiCard>
         </div>
       </div>
     </section>
@@ -254,8 +284,8 @@ const stats = [
               Rejoignez des centaines de producteurs qui utilisent déjà Ableton Copilot pour
               accélérer leur créativité.
             </p>
-            <router-link to="/download">
-              <Button size="lg">
+            <NuxtLink to="/download">
+              <UiButton size="lg">
                 Commencer maintenant
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
@@ -265,8 +295,8 @@ const stats = [
                     d="M13 7l5 5m0 0l-5 5m5-5H6"
                   />
                 </svg>
-              </Button>
-            </router-link>
+              </UiButton>
+            </NuxtLink>
           </div>
         </div>
       </div>

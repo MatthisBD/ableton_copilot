@@ -232,7 +232,11 @@
       "WebFetch(domain:jasonwatmore.com)",
       "WebFetch(domain:adsense.google.com)",
       "WebFetch(domain:www.monetizemore.com)",
-      "WebFetch(domain:www.the-koi.com)"
+      "WebFetch(domain:www.the-koi.com)",
+      "WebFetch(domain:nuxt.com)",
+      "WebFetch(domain:medium.com)",
+      "WebFetch(domain:blog.logrocket.com)",
+      "WebFetch(domain:nuxtseo.com)"
     ],
     "deny": [],
     "ask": []

@@ -1,5 +1,21 @@
 <script setup lang="ts">
-import { Button, Card } from '@/components/ui';
+useSeoMeta({
+  title: 'Fonctionnalités - Ableton Copilot',
+  description:
+    'Decouvrez toutes les fonctionnalites d\'Ableton Copilot : Chat IA multi-provider, generation MIDI avancee, controle Ableton Live, generation audio par IA.',
+  ogTitle: 'Fonctionnalités - Ableton Copilot',
+  ogDescription:
+    'Chat IA, generation MIDI, controle Ableton, generation audio. Tout pour accelerer votre production musicale.',
+  ogImage: 'https://ableton-copilot.com/og-features.png',
+  twitterCard: 'summary_large_image',
+})
+
+useSchemaOrg([
+  defineWebPage({
+    name: 'Fonctionnalités - Ableton Copilot',
+    description: 'Toutes les fonctionnalites de l\'assistant IA pour la production musicale.',
+  }),
+])
 
 const mainFeatures = [
   {
@@ -162,7 +178,7 @@ const additionalFeatures = [
               </ul>
             </div>
             <div :class="{ 'lg:order-1': index % 2 === 1 }">
-              <Card
+              <UiCard
                 class="aspect-video flex items-center justify-center bg-gradient-to-br from-zinc-800/50 to-zinc-900/50"
               >
                 <div
@@ -226,7 +242,7 @@ const additionalFeatures = [
                     />
                   </svg>
                 </div>
-              </Card>
+              </UiCard>
             </div>
           </div>
         </div>
@@ -243,7 +259,7 @@ const additionalFeatures = [
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Card
+          <UiCard
             v-for="feature in additionalFeatures"
             :key="feature.title"
             class="p-6 hover:border-zinc-700 transition-colors"
@@ -336,7 +352,7 @@ const additionalFeatures = [
             </div>
             <h3 class="text-lg font-semibold text-zinc-100 mb-2">{{ feature.title }}</h3>
             <p class="text-zinc-400 text-sm leading-relaxed">{{ feature.description }}</p>
-          </Card>
+          </UiCard>
         </div>
       </div>
     </section>
@@ -348,8 +364,8 @@ const additionalFeatures = [
           <p class="text-zinc-400 text-lg mb-8">
             Téléchargez Ableton Copilot gratuitement et commencez à produire.
           </p>
-          <router-link to="/download">
-            <Button size="lg">
+          <NuxtLink to="/download">
+            <UiButton size="lg">
               Télécharger maintenant
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
@@ -359,8 +375,8 @@ const additionalFeatures = [
                   d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                 />
               </svg>
-            </Button>
-          </router-link>
+            </UiButton>
+          </NuxtLink>
         </div>
       </div>
     </section>
