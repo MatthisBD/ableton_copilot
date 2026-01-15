@@ -6,7 +6,7 @@ const features = [
     icon: 'chat',
     title: 'Chat IA Intelligent',
     description:
-      'Discutez naturellement avec une IA qui comprend la production musicale. Claude, GPT, Gemini ou votre propre LLM local (LM Studio, encore en phase de test).',
+      'Discutez naturellement avec une IA qui comprend la production musicale. Claude, GPT, Gemini ou votre propre LLM local.',
   },
   {
     icon: 'midi',
@@ -27,24 +27,24 @@ const features = [
       "Intégration Suno AI et Mureka AI pour générer des chansons complètes avec vocals directement depuis l'application.",
   },
   {
-    icon: 'samples',
-    title: 'Gestion de Samples',
+    icon: 'community',
+    title: 'Communauté',
     description:
-      'Parcourez vos samples locaux et Freesound. Détection automatique du BPM et de la tonalité.',
+      'Partagez et téléchargez des fichiers MIDI et presets VST créés par la communauté. Likes, favoris et recommandations.',
   },
   {
-    icon: 'library',
-    title: 'Bibliothèque de Sons',
+    icon: 'marketplace',
+    title: 'Marketplace',
     description:
-      'Presets de genres, patterns de drums et profils de style. Partagez avec la communauté.',
+      'Bientôt disponible : achetez des sample packs premium avec un système de crédits. Drums, synths, vocals et plus.',
   },
 ]
 
 const stats = [
-  { value: '5', label: 'Modèles IA' },
-  { value: '1000+', label: 'Patterns MIDI' },
+  { value: '80+', label: 'Actions IA' },
+  { value: '40+', label: 'Plugins VST' },
   { value: '21', label: 'Genres musicaux' },
-  { value: '24/7', label: 'Disponibilité' },
+  { value: '16', label: 'Types MIDI' },
 ]
 </script>
 
@@ -199,7 +199,7 @@ const stats = [
                 />
               </svg>
               <svg
-                v-else-if="feature.icon === 'samples'"
+                v-else-if="feature.icon === 'community'"
                 class="w-6 h-6 text-red-500"
                 fill="none"
                 stroke="currentColor"
@@ -209,11 +209,11 @@ const stats = [
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
                 />
               </svg>
               <svg
-                v-else-if="feature.icon === 'library'"
+                v-else-if="feature.icon === 'marketplace'"
                 class="w-6 h-6 text-red-500"
                 fill="none"
                 stroke="currentColor"
@@ -223,7 +223,7 @@ const stats = [
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                 />
               </svg>
             </div>

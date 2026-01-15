@@ -223,7 +223,16 @@
       "Bash(git init:*)",
       "Bash(git branch:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "WebFetch(domain:ableton-copilot.com)",
+      "Bash(gh api:*)",
+      "Bash(gh run list:*)",
+      "Bash(gh auth status:*)",
+      "WebFetch(domain:support.google.com)",
+      "WebFetch(domain:jasonwatmore.com)",
+      "WebFetch(domain:adsense.google.com)",
+      "WebFetch(domain:www.monetizemore.com)",
+      "WebFetch(domain:www.the-koi.com)"
     ],
     "deny": [],
     "ask": []
