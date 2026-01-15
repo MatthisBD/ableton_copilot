@@ -2,10 +2,9 @@
 useSeoMeta({
   title: 'Télécharger - Ableton Copilot',
   description:
-    'Telechargez Ableton Copilot gratuitement pour Windows. Version 1.0.0-beta disponible. 100 credits offerts a l\'inscription.',
+    "Telechargez Ableton Copilot gratuitement pour Windows. Version 1.0.0-beta disponible. 100 credits offerts a l'inscription.",
   ogTitle: 'Télécharger Ableton Copilot',
-  ogDescription:
-    'Telechargez gratuitement l\'assistant IA pour Ableton Live. Windows 10/11 64-bit.',
+  ogDescription: "Telechargez gratuitement l'assistant IA pour Ableton Live. Windows 10/11 64-bit.",
   ogImage: 'https://ableton-copilot.com/og-download.png',
   twitterCard: 'summary_large_image',
 })
@@ -13,7 +12,7 @@ useSeoMeta({
 useSchemaOrg([
   defineWebPage({
     name: 'Télécharger - Ableton Copilot',
-    description: 'Page de telechargement d\'Ableton Copilot.',
+    description: "Page de telechargement d'Ableton Copilot.",
   }),
   defineSoftwareApp({
     name: 'Ableton Copilot',
@@ -24,7 +23,8 @@ useSchemaOrg([
       price: '0',
       priceCurrency: 'EUR',
     },
-    downloadUrl: 'https://github.com/MatthisBD/ableton_copilot/releases/latest/download/AbletonCopilot-Setup.exe',
+    downloadUrl:
+      'https://github.com/MatthisBD/Ableton-copilot/releases/download/v1.0.0/Ableton-Copilot-Setup-1.0.0.exe',
   }),
 ])
 
