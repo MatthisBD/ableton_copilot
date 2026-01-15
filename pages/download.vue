@@ -57,7 +57,7 @@ const changelog = [
 ]
 
 const downloadUrl =
-  'https://github.com/MatthisBD/ableton_copilot/releases/latest/download/AbletonCopilot-Setup.exe'
+  'https://github.com/MatthisBD/Ableton-copilot/releases/download/v1.0.0/Ableton-Copilot-Setup-1.0.0.exe'
 </script>
 
 <template>
