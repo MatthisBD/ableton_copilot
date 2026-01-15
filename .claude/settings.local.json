@@ -236,7 +236,9 @@
       "WebFetch(domain:nuxt.com)",
       "WebFetch(domain:medium.com)",
       "WebFetch(domain:blog.logrocket.com)",
-      "WebFetch(domain:nuxtseo.com)"
+      "WebFetch(domain:nuxtseo.com)",
+      "Bash(npx vercel:*)",
+      "WebFetch(domain:www.ableton-copilot.com)"
     ],
     "deny": [],
     "ask": []
