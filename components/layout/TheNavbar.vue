@@ -20,11 +20,11 @@ const navLinks = [
     <div class="max-w-7xl mx-auto px-6 py-4">
       <div class="flex items-center justify-between">
         <NuxtLink to="/" class="flex items-center gap-3 hover:opacity-80 transition group">
-          <div class="w-10 h-10 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg shadow-red-500/25 group-hover:shadow-red-500/40 transition-shadow">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-            </svg>
-          </div>
+          <img
+            src="/logo.png"
+            alt="Ableton Copilot"
+            class="w-10 h-10 rounded-xl shadow-lg shadow-red-500/25 group-hover:shadow-red-500/40 transition-shadow"
+          />
           <span class="text-xl font-bold text-zinc-100">
             Ableton <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-pink-500">Copilot</span>
           </span>
