@@ -97,7 +97,6 @@ onUnmounted(() => {
                 <p><strong class="text-zinc-300">Entreprise individuelle</strong></p>
                 <p>SIRET : 97903881700016</p>
                 <p>Email : ableton.copilot@gmail.com</p>
-                <p>Directeur de la publication : Matthis Music</p>
               </div>
             </UiCard>
 
@@ -169,7 +168,8 @@ onUnmounted(() => {
             <div>
               <h3 class="text-lg font-semibold text-zinc-100 mb-3">Vos droits (RGPD)</h3>
               <p class="text-zinc-400 mb-2">
-                Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :
+                Conformément au Règlement Général sur la Protection des Données (RGPD), vous
+                disposez des droits suivants :
               </p>
               <ul class="text-zinc-400 mt-2 space-y-1">
                 <li>Droit d'accès à vos données personnelles</li>
@@ -180,21 +180,27 @@ onUnmounted(() => {
                 <li>Droit d'opposition au traitement</li>
               </ul>
               <p class="text-zinc-400 mt-3">
-                Pour exercer ces droits, contactez-nous à ableton.copilot@gmail.com. Vous pouvez également déposer une réclamation auprès de la CNIL (cnil.fr).
+                Pour exercer ces droits, contactez-nous à ableton.copilot@gmail.com. Vous pouvez
+                également déposer une réclamation auprès de la CNIL (cnil.fr).
               </p>
             </div>
 
             <div>
               <h3 class="text-lg font-semibold text-zinc-100 mb-3">Publicité et cookies tiers</h3>
               <p class="text-zinc-400">
-                Ce site utilise Google AdSense pour afficher des publicités. Google et ses partenaires peuvent utiliser des cookies pour diffuser des annonces basées sur vos visites antérieures. Vous pouvez désactiver la publicité personnalisée dans les paramètres de votre compte Google.
+                Ce site utilise Google AdSense pour afficher des publicités. Google et ses
+                partenaires peuvent utiliser des cookies pour diffuser des annonces basées sur vos
+                visites antérieures. Vous pouvez désactiver la publicité personnalisée dans les
+                paramètres de votre compte Google.
               </p>
             </div>
 
             <div>
               <h3 class="text-lg font-semibold text-zinc-100 mb-3">Conservation des données</h3>
               <p class="text-zinc-400">
-                Vos données sont conservées pendant la durée de votre utilisation du service et jusqu'à 3 ans après la suppression de votre compte, conformément aux obligations légales.
+                Vos données sont conservées pendant la durée de votre utilisation du service et
+                jusqu'à 3 ans après la suppression de votre compte, conformément aux obligations
+                légales.
               </p>
             </div>
           </div>
