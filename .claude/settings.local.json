@@ -246,7 +246,10 @@
       "WebFetch(domain:www.termsfeed.com)",
       "WebFetch(domain:www.websitepolicies.com)",
       "WebFetch(domain:www.captaincontrat.com)",
-      "WebFetch(domain:www.francenum.gouv.fr)"
+      "WebFetch(domain:www.francenum.gouv.fr)",
+      "Bash(npx nuxt prepare)",
+      "Bash(npm view:*)",
+      "Bash(npx sharp-cli:*)"
     ],
     "deny": [],
     "ask": []

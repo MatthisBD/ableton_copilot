@@ -9,6 +9,7 @@ const toggleMenu = () => {
 const navLinks = [
   { path: '/', label: 'Accueil' },
   { path: '/features', label: 'Fonctionnalités' },
+  { path: '/demo', label: 'Démo' },
   { path: '/docs', label: 'Documentation' },
   { path: '/pricing', label: 'Tarifs' },
   { path: '/contact', label: 'Contact' },

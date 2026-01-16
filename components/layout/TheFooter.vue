@@ -4,6 +4,7 @@ const currentYear = new Date().getFullYear()
 const footerLinks = {
   product: [
     { label: 'Fonctionnalités', path: '/features' },
+    { label: 'Démonstration', path: '/demo' },
     { label: 'Tarifs', path: '/pricing' },
     { label: 'Télécharger', path: '/download' },
   ],

@@ -13,13 +13,13 @@
     "format": "prettier --write src/ app/ components/ pages/ layouts/ composables/ server/"
   },
   "dependencies": {
-    "@nuxtjs/seo": "^2.0.5",
-    "@nuxtjs/tailwindcss": "^6.13.1",
-    "@pinia/nuxt": "^0.10.0",
+    "@nuxtjs/seo": "^3.3.0",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@pinia/nuxt": "^0.11.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-vue-next": "^0.562.0",
-    "nuxt": "^3.15.4",
+    "nuxt": "^4.2.2",
     "pinia": "^3.0.4",
     "tailwind-merge": "^3.4.0",
     "vue": "^3.5.26",

@@ -46,7 +46,7 @@ const plans = [
       'Support prioritaire',
       'Nouveautés en avant-première',
     ],
-    cta: "S'abonner",
+    cta: 'Achat in-app',
     popular: true,
     available: true,
   },
