@@ -37,7 +37,7 @@ const footerLinks = {
             </span>
           </NuxtLink>
           <p class="text-zinc-400 text-sm leading-relaxed">
-            L'assistant IA pour la production musicale. Controlez Ableton Live par la conversation.
+            La communauté des producteurs Ableton Live. Partagez du MIDI, des presets et créez avec l'IA.
           </p>
           <div class="flex gap-3 mt-6">
             <a href="https://github.com/MatthisBD/ableton_copilot" target="_blank" rel="noopener" class="w-10 h-10 rounded-lg bg-zinc-800 hover:bg-zinc-700 flex items-center justify-center text-zinc-400 hover:text-zinc-100 transition">
@@ -87,12 +87,17 @@ const footerLinks = {
         </div>
       </div>
 
-      <div class="border-t border-zinc-800 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="text-sm text-zinc-500">
-          &copy; {{ currentYear }} Ableton Copilot. Tous droits réservés.
-        </p>
-        <p class="text-sm text-zinc-500">
-          Fait avec <span class="text-red-500">&#9829;</span> pour les producteurs de musique
+      <div class="border-t border-zinc-800 mt-12 pt-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-4">
+          <p class="text-sm text-zinc-500">
+            &copy; {{ currentYear }} Ableton Copilot. Tous droits réservés.
+          </p>
+          <p class="text-sm text-zinc-500">
+            Fait avec <span class="text-red-500">&#9829;</span> pour les producteurs de musique
+          </p>
+        </div>
+        <p class="text-xs text-zinc-600 text-center">
+          "Ableton" et "Ableton Live" sont des marques déposées d'Ableton AG. Ableton Copilot n'est pas affilié à Ableton AG.
         </p>
       </div>
     </div>

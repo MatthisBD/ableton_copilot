@@ -238,7 +238,15 @@
       "WebFetch(domain:blog.logrocket.com)",
       "WebFetch(domain:nuxtseo.com)",
       "Bash(npx vercel:*)",
-      "WebFetch(domain:www.ableton-copilot.com)"
+      "WebFetch(domain:www.ableton-copilot.com)",
+      "WebFetch(domain:webtimizesolutions.com)",
+      "WebFetch(domain:termly.io)",
+      "WebFetch(domain:gdpr.eu)",
+      "WebFetch(domain:www.legalplace.fr)",
+      "WebFetch(domain:www.termsfeed.com)",
+      "WebFetch(domain:www.websitepolicies.com)",
+      "WebFetch(domain:www.captaincontrat.com)",
+      "WebFetch(domain:www.francenum.gouv.fr)"
     ],
     "deny": [],
     "ask": []

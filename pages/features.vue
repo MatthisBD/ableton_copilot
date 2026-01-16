@@ -87,13 +87,7 @@ const additionalFeatures = [
     icon: 'preset-share',
     title: 'Presets VST Communautaires',
     description:
-      'Partagez vos presets pour 40+ plugins : Serum, Vital, Massive, Omnisphere, Pigments et plus.',
-  },
-  {
-    icon: 'marketplace',
-    title: 'Marketplace (Bientôt)',
-    description:
-      'Sample packs premium à acheter avec des crédits. Drums, synths, vocals, FX et loops de qualité.',
+      'Partagez vos presets pour les synthés populaires : Serum, Vital, Massive, Omnisphere, Pigments et plus.',
   },
   {
     icon: 'voice',
@@ -112,6 +106,12 @@ const additionalFeatures = [
     title: 'Sécurisé',
     description:
       'Authentification OAuth (Google, GitHub), vérification email et gestion sécurisée des clés API.',
+  },
+  {
+    icon: 'library',
+    title: 'Bibliothèque de Sons',
+    description:
+      'Accédez à une vaste bibliothèque de samples organisés par genre. 21 genres musicaux disponibles.',
   },
 ]
 </script>
@@ -249,6 +249,10 @@ const additionalFeatures = [
       </div>
     </section>
 
+    <div class="max-w-7xl mx-auto px-6 py-8">
+      <UiAdBanner ad-slot="4567890123" ad-format="horizontal" />
+    </div>
+
     <section class="relative bg-zinc-950/50">
       <div class="max-w-7xl mx-auto px-6 py-24">
         <div class="text-center mb-16">
@@ -294,7 +298,7 @@ const additionalFeatures = [
                 />
               </svg>
               <svg
-                v-else-if="feature.icon === 'marketplace'"
+                v-else-if="feature.icon === 'library'"
                 class="w-5 h-5 text-red-500"
                 fill="none"
                 stroke="currentColor"
@@ -304,7 +308,7 @@ const additionalFeatures = [
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
                 />
               </svg>
               <svg

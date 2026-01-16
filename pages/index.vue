@@ -1,24 +1,24 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Ableton Copilot - Assistant IA pour la Production Musicale',
+  title: 'Ableton Copilot - Plateforme Communautaire pour Producteurs',
   description:
-    "Controlez Ableton Live par la conversation. Generez du MIDI, des samples et de la musique avec l'intelligence artificielle. Le GitHub Copilot de la production musicale.",
-  ogTitle: 'Ableton Copilot - Assistant IA pour Ableton Live',
+    'Partagez et telechargez des fichiers MIDI et presets VST. Generez du MIDI avec IA et controlez Ableton Live. La communaute des producteurs de musique electronique.',
+  ogTitle: 'Ableton Copilot - Communaute de Producteurs',
   ogDescription:
-    "L'assistant IA qui revolutionne la production musicale. Generez du MIDI, controlez Ableton, creez de la musique.",
+    'Plateforme communautaire pour producteurs. Partagez MIDI, presets VST, et creez avec des outils IA.',
   ogImage: 'https://ableton-copilot.com/og-image.png',
   ogType: 'website',
   twitterCard: 'summary_large_image',
-  twitterTitle: 'Ableton Copilot - Assistant IA pour Ableton Live',
+  twitterTitle: 'Ableton Copilot - Communaute de Producteurs',
   twitterDescription:
-    "L'assistant IA qui revolutionne la production musicale. Generez du MIDI, controlez Ableton.",
+    'Plateforme communautaire pour producteurs. Partagez MIDI, presets VST, et creez avec des outils IA.',
 })
 
 useSchemaOrg([
   defineWebPage({
-    name: 'Ableton Copilot - Assistant IA pour la Production Musicale',
+    name: 'Ableton Copilot - Plateforme Communautaire pour Producteurs',
     description:
-      "Controlez Ableton Live par la conversation. Generez du MIDI avec l'intelligence artificielle.",
+      'Partagez et telechargez des fichiers MIDI et presets VST. Generez du MIDI avec IA.',
   }),
   defineSoftwareApp({
     name: 'Ableton Copilot',
@@ -33,10 +33,16 @@ useSchemaOrg([
 
 const features = [
   {
-    icon: 'chat',
-    title: 'Chat IA Intelligent',
+    icon: 'community',
+    title: 'Communauté Active',
     description:
-      'Discutez naturellement avec une IA qui comprend la production musicale. Claude, GPT, Gemini ou votre propre LLM local.',
+      'Partagez et téléchargez des fichiers MIDI créés par la communauté. Drums, mélodies, basslines et plus encore.',
+  },
+  {
+    icon: 'presets',
+    title: 'Presets VST Partagés',
+    description:
+      'Échangez vos presets pour Serum, Vital, Massive et autres synthés populaires avec la communauté.',
   },
   {
     icon: 'midi',
@@ -48,19 +54,19 @@ const features = [
     icon: 'ableton',
     title: 'Contrôle Ableton Live',
     description:
-      'Créez des pistes, clips et notes MIDI directement dans votre session. Pas de copier-coller, tout est automatique.',
+      'Créez des pistes, clips et notes MIDI directement dans votre session. Intégration complète avec Ableton.',
+  },
+  {
+    icon: 'chat',
+    title: 'Assistant IA',
+    description:
+      'Discutez avec une IA qui comprend la production musicale. Support multi-provider : Claude, GPT, Gemini.',
   },
   {
     icon: 'audio',
     title: 'Génération Audio',
     description:
-      "Intégration Suno AI et Mureka AI pour générer des chansons complètes avec vocals directement depuis l'application.",
-  },
-  {
-    icon: 'community',
-    title: 'Communauté',
-    description:
-      'Partagez et téléchargez des fichiers MIDI et presets VST créés par la communauté. Likes, favoris et recommandations.',
+      'Intégration Suno AI et Mureka AI pour générer des chansons complètes avec vocals.',
   },
   {
     icon: 'marketplace',
@@ -71,10 +77,10 @@ const features = [
 ]
 
 const stats = [
-  { value: '80+', label: 'Actions IA' },
-  { value: '40+', label: 'Plugins VST' },
   { value: '21', label: 'Genres musicaux' },
   { value: '16', label: 'Types MIDI' },
+  { value: '6', label: 'Modèles IA' },
+  { value: '2', label: 'Plans disponibles' },
 ]
 </script>
 
@@ -98,15 +104,15 @@ const stats = [
           </div>
 
           <h1 class="text-4xl md:text-6xl font-bold text-zinc-100 leading-tight mb-6">
-            L'assistant IA pour
+            La communauté des producteurs
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-pink-500">
               Ableton Live</span
             >
           </h1>
 
           <p class="text-xl text-zinc-400 mb-10 leading-relaxed">
-            Contrôlez Ableton par la conversation. Générez du MIDI, des samples et de la musique
-            avec l'intelligence artificielle. Le GitHub Copilot de la production musicale.
+            Partagez et téléchargez des fichiers MIDI et presets VST. Générez du contenu avec l'IA
+            et contrôlez Ableton directement depuis l'application.
           </p>
 
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -243,6 +249,20 @@ const stats = [
                 />
               </svg>
               <svg
+                v-else-if="feature.icon === 'presets'"
+                class="w-6 h-6 text-red-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                />
+              </svg>
+              <svg
                 v-else-if="feature.icon === 'marketplace'"
                 class="w-6 h-6 text-red-500"
                 fill="none"
@@ -264,8 +284,12 @@ const stats = [
       </div>
     </section>
 
+    <div class="max-w-7xl mx-auto px-6 py-8">
+      <UiAdBanner ad-slot="3456789012" ad-format="horizontal" />
+    </div>
+
     <section class="relative">
-      <div class="max-w-7xl mx-auto px-6 py-18">
+      <div class="max-w-7xl mx-auto px-6 py-18 mb-6">
         <div
           class="relative rounded-3xl bg-gradient-to-r from-red-500/10 to-pink-500/10 border border-red-500/20 p-12 md:p-16 text-center overflow-hidden"
         >

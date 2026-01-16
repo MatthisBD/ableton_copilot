@@ -25,7 +25,7 @@ const sections = [
   { id: 'chat', label: 'Chat IA' },
   { id: 'midi', label: 'Génération MIDI' },
   { id: 'audio', label: 'Génération Audio' },
-  { id: 'api', label: 'API Reference' },
+  { id: 'api', label: 'Intégration' },
   { id: 'faq', label: 'FAQ' },
 ]
 
@@ -182,6 +182,8 @@ onUnmounted(() => {
             </div>
           </section>
 
+          <UiAdBanner ad-slot="1234567890" ad-format="horizontal" />
+
           <section id="configuration" class="mb-16">
             <h2 class="text-2xl font-bold text-zinc-100 mb-4">Configuration</h2>
 
@@ -281,6 +283,8 @@ onUnmounted(() => {
             </div>
           </section>
 
+          <UiAdBanner ad-slot="2345678901" ad-format="horizontal" />
+
           <section id="midi" class="mb-16">
             <h2 class="text-2xl font-bold text-zinc-100 mb-4">Génération MIDI</h2>
 
@@ -371,34 +375,50 @@ onUnmounted(() => {
           </section>
 
           <section id="api" class="mb-16">
-            <h2 class="text-2xl font-bold text-zinc-100 mb-4">API Reference</h2>
+            <h2 class="text-2xl font-bold text-zinc-100 mb-4">Intégration AbletonJS</h2>
 
             <p class="text-zinc-400 mb-6">
-              Ableton Copilot expose une API REST pour les développeurs. Documentation complète
-              disponible prochainement.
+              Ableton Copilot utilise AbletonJS pour communiquer avec Ableton Live. Voici les
+              principales fonctionnalités disponibles via cette intégration.
             </p>
 
-            <UiCard class="p-4 bg-amber-500/10 border-amber-500/20">
-              <div class="flex items-center gap-3">
-                <svg
-                  class="w-5 h-5 text-amber-500"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-                  />
-                </svg>
-                <p class="text-amber-200 text-sm">
-                  L'API publique est en cours de développement. Contactez-nous pour un accès
-                  anticipé.
-                </p>
-              </div>
-            </UiCard>
+            <div class="grid gap-4 md:grid-cols-2">
+              <UiCard class="p-4">
+                <h4 class="text-zinc-100 font-medium mb-2">Contrôle du transport</h4>
+                <ul class="text-zinc-400 text-sm space-y-1">
+                  <li>Play, Stop, Record</li>
+                  <li>Réglage du tempo</li>
+                  <li>Navigation dans le projet</li>
+                </ul>
+              </UiCard>
+
+              <UiCard class="p-4">
+                <h4 class="text-zinc-100 font-medium mb-2">Gestion des pistes</h4>
+                <ul class="text-zinc-400 text-sm space-y-1">
+                  <li>Création de pistes MIDI/Audio</li>
+                  <li>Duplication et suppression</li>
+                  <li>Configuration des entrées/sorties</li>
+                </ul>
+              </UiCard>
+
+              <UiCard class="p-4">
+                <h4 class="text-zinc-100 font-medium mb-2">Manipulation des clips</h4>
+                <ul class="text-zinc-400 text-sm space-y-1">
+                  <li>Création de clips MIDI</li>
+                  <li>Insertion de notes</li>
+                  <li>Copie et déplacement</li>
+                </ul>
+              </UiCard>
+
+              <UiCard class="p-4">
+                <h4 class="text-zinc-100 font-medium mb-2">Accès au browser</h4>
+                <ul class="text-zinc-400 text-sm space-y-1">
+                  <li>Navigation dans les samples</li>
+                  <li>Chargement d'instruments</li>
+                  <li>Prévisualisation</li>
+                </ul>
+              </UiCard>
+            </div>
           </section>
 
           <section id="faq" class="mb-16">

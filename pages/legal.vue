@@ -2,7 +2,7 @@
 useSeoMeta({
   title: 'Mentions Légales - Ableton Copilot',
   description:
-    'Mentions legales, politique de confidentialite, conditions d\'utilisation et politique de cookies d\'Ableton Copilot.',
+    "Mentions legales, politique de confidentialite, conditions d'utilisation et politique de cookies d'Ableton Copilot.",
   ogTitle: 'Mentions Légales - Ableton Copilot',
   ogDescription: 'Informations legales et politique de confidentialite.',
   twitterCard: 'summary',
@@ -11,7 +11,7 @@ useSeoMeta({
 useSchemaOrg([
   defineWebPage({
     name: 'Mentions Légales - Ableton Copilot',
-    description: 'Informations legales d\'Ableton Copilot.',
+    description: "Informations legales d'Ableton Copilot.",
   }),
 ])
 
@@ -90,40 +90,15 @@ onUnmounted(() => {
         <section id="mentions" class="mb-16">
           <h1 class="text-4xl font-bold text-zinc-100 mb-6">Mentions Légales</h1>
 
-          <UiCard class="p-6 bg-amber-500/10 border-amber-500/20 mb-8">
-            <div class="flex items-start gap-3">
-              <svg
-                class="w-5 h-5 text-amber-500 mt-0.5 shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-                />
-              </svg>
-              <div>
-                <h4 class="text-amber-200 font-medium mb-1">En cours de rédaction</h4>
-                <p class="text-amber-200/70 text-sm">
-                  Les mentions légales complètes seront publiées prochainement. Cette page sert de
-                  placeholder.
-                </p>
-              </div>
-            </div>
-          </UiCard>
-
           <div class="prose prose-invert prose-zinc max-w-none">
             <h2 class="text-xl font-semibold text-zinc-100 mb-4">Éditeur du site</h2>
             <UiCard class="p-4 mb-6">
-              <p class="text-zinc-400 text-sm">
-                [Nom de l'entreprise ou du développeur]<br />
-                [Adresse]<br />
-                [Email de contact]<br />
-                [Numéro SIRET si applicable]
-              </p>
+              <div class="text-zinc-400 text-sm space-y-1">
+                <p><strong class="text-zinc-300">Entreprise individuelle</strong></p>
+                <p>SIRET : 97903881700016</p>
+                <p>Email : ableton.copilot@gmail.com</p>
+                <p>Directeur de la publication : Matthis Music</p>
+              </div>
             </UiCard>
 
             <h2 class="text-xl font-semibold text-zinc-100 mb-4">Hébergement</h2>
@@ -192,11 +167,34 @@ onUnmounted(() => {
             </div>
 
             <div>
-              <h3 class="text-lg font-semibold text-zinc-100 mb-3">Vos droits</h3>
+              <h3 class="text-lg font-semibold text-zinc-100 mb-3">Vos droits (RGPD)</h3>
+              <p class="text-zinc-400 mb-2">
+                Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :
+              </p>
+              <ul class="text-zinc-400 mt-2 space-y-1">
+                <li>Droit d'accès à vos données personnelles</li>
+                <li>Droit de rectification des données inexactes</li>
+                <li>Droit à l'effacement (droit à l'oubli)</li>
+                <li>Droit à la limitation du traitement</li>
+                <li>Droit à la portabilité de vos données</li>
+                <li>Droit d'opposition au traitement</li>
+              </ul>
+              <p class="text-zinc-400 mt-3">
+                Pour exercer ces droits, contactez-nous à ableton.copilot@gmail.com. Vous pouvez également déposer une réclamation auprès de la CNIL (cnil.fr).
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold text-zinc-100 mb-3">Publicité et cookies tiers</h3>
               <p class="text-zinc-400">
-                Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, de
-                suppression et de portabilité de vos données. Contactez-nous pour exercer ces
-                droits.
+                Ce site utilise Google AdSense pour afficher des publicités. Google et ses partenaires peuvent utiliser des cookies pour diffuser des annonces basées sur vos visites antérieures. Vous pouvez désactiver la publicité personnalisée dans les paramètres de votre compte Google.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold text-zinc-100 mb-3">Conservation des données</h3>
+              <p class="text-zinc-400">
+                Vos données sont conservées pendant la durée de votre utilisation du service et jusqu'à 3 ans après la suppression de votre compte, conformément aux obligations légales.
               </p>
             </div>
           </div>
@@ -294,7 +292,7 @@ onUnmounted(() => {
         </section>
 
         <UiCard class="p-6 bg-zinc-800/50">
-          <p class="text-zinc-400 text-sm">Dernière mise à jour : 30 Décembre 2025</p>
+          <p class="text-zinc-400 text-sm">Dernière mise à jour : 16 janvier 2026</p>
           <p class="text-zinc-500 text-sm mt-2">
             Pour toute question concernant ces documents, contactez-nous à
             <a href="mailto:ableton.copilot@gmail.com" class="text-red-500 hover:underline"

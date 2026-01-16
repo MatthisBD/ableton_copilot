@@ -4,8 +4,7 @@ useSeoMeta({
   description:
     'Decouvrez nos offres : plan gratuit avec 100 credits, abonnement BETA a 10€/mois, et packs de credits. Tarification simple et transparente.',
   ogTitle: 'Tarifs - Ableton Copilot',
-  ogDescription:
-    'Commencez gratuitement avec 100 credits. Abonnements a partir de 10€/mois.',
+  ogDescription: 'Commencez gratuitement avec 100 credits. Abonnements a partir de 10€/mois.',
   ogImage: 'https://ableton-copilot.com/og-pricing.png',
   twitterCard: 'summary_large_image',
 })
@@ -60,9 +59,8 @@ const plans = [
       '2500 crédits/mois',
       'Accès complet aux fonctionnalités',
       'Tous les modèles IA',
-      'Génération audio illimitée',
+      'Génération audio (Suno, Mureka)',
       'Support prioritaire',
-      'API access',
     ],
     cta: 'Non disponible en bêta',
     popular: false,
@@ -78,7 +76,6 @@ const plans = [
       'Accès complet aux fonctionnalités',
       'Tous les modèles IA',
       'Support premium 24/7',
-      'API access illimité',
       'Formation personnalisée',
     ],
     cta: 'Bientôt',
@@ -140,7 +137,7 @@ const creditCosts = [
             </div>
 
             <div v-if="!plan.available" class="absolute top-4 right-4">
-              <span class="px-2 py-1 rounded bg-zinc-800 text-zinc-500 text-xs"> Bientôt </span>
+              <span class="px-2 py-1 rounded bg-zinc-800 text-zinc-500 text-xs">Bientôt</span>
             </div>
 
             <div class="mb-6">
@@ -185,7 +182,9 @@ const creditCosts = [
 
     <section class="relative">
       <div class="max-w-7xl mx-auto px-6 py-16">
-        <UiCard class="p-6 bg-gradient-to-r from-purple-500/10 to-violet-500/10 border-purple-500/20">
+        <UiCard
+          class="p-6 bg-gradient-to-r from-purple-500/10 to-violet-500/10 border-purple-500/20"
+        >
           <div class="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h3 class="text-xl font-bold text-zinc-100 mb-2">Mode BYOK</h3>
